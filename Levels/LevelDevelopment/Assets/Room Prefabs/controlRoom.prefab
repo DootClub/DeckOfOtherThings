@@ -2162,7 +2162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4002791338437238}
   m_Layer: 0
-  m_Name: RoomExitNESW
+  m_Name: controlRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
