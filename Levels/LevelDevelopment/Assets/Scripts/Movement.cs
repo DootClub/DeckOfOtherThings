@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
 		if (Input.GetKey(KeyCode.S))
 		{
 			transform.position += Vector3.down * speed * Time.deltaTime;
-
+			
 		}
 
 		if (Input.GetKey(KeyCode.A))
