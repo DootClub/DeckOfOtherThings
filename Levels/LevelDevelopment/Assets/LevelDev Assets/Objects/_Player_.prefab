@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212459308372735610}
   - component: {fileID: 114117008381443768}
   - component: {fileID: 61953403700001880}
+  - component: {fileID: 50993567742928268}
   m_Layer: 0
   m_Name: _Player_
   m_TagString: Untagged
@@ -113,6 +114,26 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!50 &50993567742928268
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1864183162770014}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61953403700001880
 BoxCollider2D:
   m_ObjectHideFlags: 1
