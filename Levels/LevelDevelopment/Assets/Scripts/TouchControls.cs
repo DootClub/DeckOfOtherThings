@@ -26,14 +26,15 @@ public class TouchControls : MonoBehaviour
 			playerCharacter.transform.Translate(-touchPosition.x * speed, -touchPosition.y * speed, 0);
 		}
 
-		/*if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0))
 		{
-			// Get movement of finger since last frame
+			/*Get movement of finger since last frame
 			Vector2 touchPosition = Input.GetTouch(0).deltaPosition;
 
-			// Move Character across X and Y planes
-			playerCharacter.transform.Translate(-touchPosition.x * speed, -touchPosition.y * speed, 0);
-		}*/
+			Move Character across X and Y planes
+			playerCharacter.transform.Translate(-touchPosition.x * speed, -touchPosition.y * speed, 0);*/
+			OnMouseDown();
+		}
 	}
 
 	void OnMouseDown ()
@@ -45,6 +46,8 @@ public class TouchControls : MonoBehaviour
 
 			// Move Character across X and Y planes
 			playerCharacter.transform.Translate(-mousePosition.x * speed, -mousePosition.y * speed, 0);
+
+			Debug.Log("It works!");
 		}
 	}
 }
