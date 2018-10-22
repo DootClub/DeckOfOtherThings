@@ -6,7 +6,7 @@ public class TouchControls : MonoBehaviour
 {
 	private Rigidbody2D playerCharacter;
 
-	public float speed = 0.01f;
+	// public float speed = 0.01f;
 
 	// Use this for initialization
 	void Start ()
@@ -34,12 +34,18 @@ public class TouchControls : MonoBehaviour
 
 	void OnMouseDown ()
 	{
-		// Get movement of finger since last frame
+		RaycastHit hit;
+
+		if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+		{
+			playerCharacter.transform.position = hit.point;
+		}
+		/*Get movement of finger since last frame
 		Vector2 mousePosition = Input.mousePosition;
 
 		// Move Character across X and Y planes
 		playerCharacter.transform.Translate(-mousePosition.x * speed, -mousePosition.y * speed, 0);
 
-		Debug.Log("It works!");
+		Debug.Log("It works!");*/
 	}
 }
