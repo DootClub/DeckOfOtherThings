@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/10 room level.unity
     guid: 319f97092e31ac74c9efd22301d9cc6c
+  - enabled: 1
+    path: Assets/Scenes/15 room level.unity
+    guid: 4d4f90271df9c824e9184818c3126e51
+  - enabled: 1
+    path: Assets/Scenes/20 room level.unity
+    guid: e0c939a22c1cb9d458ca08baa321311b
   m_configObjects: {}
