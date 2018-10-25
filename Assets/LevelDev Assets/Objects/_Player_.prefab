@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61953403700001880}
   - component: {fileID: 50451088535636062}
   - component: {fileID: 114250221953541378}
+  - component: {fileID: 114786224345324586}
   m_Layer: 0
   m_Name: _Player_
   m_TagString: Untagged
@@ -99,7 +100,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.3721027
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -191,6 +192,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &114786224345324586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1864183162770014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d139344cf9247e646914174812025233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  majorCard: {fileID: 0}
+  minorCard: {fileID: 0}
+  health: 0
+  sp: 0
+  str: 0
+  dex: 0
+  cha: 0
+  damageOutput: 0
+  attackRate: 0
+  defense: 0
 --- !u!212 &212459308372735610
 SpriteRenderer:
   m_ObjectHideFlags: 1
