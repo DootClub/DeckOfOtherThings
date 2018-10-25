@@ -31,18 +31,18 @@ public class MovementHero : MonoBehaviour
 
 		Vector2 movement_vector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-		if (movement_vector != Vector2.zero)
-		{
-			anim.SetBool("walking", true);
-			anim.SetFloat("input_x", movement_vector.x);
-			anim.SetFloat("input_y", movement_vector.y);
-		}
-		else
-		{
-			anim.SetBool("walking", false);
-		}
+		//if (movement_vector != Vector2.zero)
+		//{
+		//	anim.SetBool("walking", true);
+		//	anim.SetFloat("input_x", movement_vector.x);
+		//	anim.SetFloat("input_y", movement_vector.y);
+		//}
+		//else
+		//{
+		//	anim.SetBool("walking", false);
+		//}
 
-		rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime * speed);
+		//rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime * speed);
 
 //#else
 
