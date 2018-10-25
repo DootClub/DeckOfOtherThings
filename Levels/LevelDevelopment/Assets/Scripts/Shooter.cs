@@ -17,6 +17,7 @@ public class Shooter : MonoBehaviour
             feeler.PlayerSeen += Shoot;
         }
     }
+
     // Update is called once per frame
     void Update ()
     {
