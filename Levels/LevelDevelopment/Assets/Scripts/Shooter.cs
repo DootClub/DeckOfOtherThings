@@ -9,20 +9,28 @@ public class Shooter : MonoBehaviour
     public GameObject ObjectToSpawn;
 
     private float LastFired;
-	
-	// Update is called once per frame
-	void Update ()
+
+    void Start()
     {
-        if (Time.time - LastFired > 1/(FireRate/10))
+        foreach(RayFeelers feeler in FindObjectsOfType<RayFeelers>())
         {
-            LastFired = Time.time;
-            Shoot();
+            feeler.PlayerSeen += Shoot;
         }
+    }
+    // Update is called once per frame
+    void Update ()
+    {
+        
         //Invoke("Shoot", ShootDelay);
 	}
 
     void Shoot()
     {
-        Instantiate(ObjectToSpawn, GetComponent<Transform>());
+        if (Time.time - LastFired > 1 / (FireRate / 10))
+        {
+            LastFired = Time.time;
+            //Shoot();
+            Instantiate(ObjectToSpawn, GetComponent<Transform>());
+        }
     }
 }
