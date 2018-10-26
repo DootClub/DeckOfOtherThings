@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TouchControls : MonoBehaviour
 {
-	// private Rigidbody2D playerCharacter;
-
 	[SerializeField] private Transform target;
 
 	private Vector2 targetPos;
@@ -26,6 +24,13 @@ public class TouchControls : MonoBehaviour
 		if (Input.GetMouseButtonDown(0))
 		{
 			targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			target.position = targetPos;
+		}
+
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+		{
+			Vector2 touchPos = Input.GetTouch(0).deltaPosition;
+			targetPos = Camera.main.ScreenToWorldPoint(touchPos);
 			target.position = targetPos;
 		}
 
