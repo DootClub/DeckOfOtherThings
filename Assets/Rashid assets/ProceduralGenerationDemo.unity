@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectToSpawn: {fileID: 1698428872878274, guid: fc210f6920c531a4baa6d1e808733bb2,
     type: 2}
+  MapSize: 0
 --- !u!4 &1555380855
 Transform:
   m_ObjectHideFlags: 0

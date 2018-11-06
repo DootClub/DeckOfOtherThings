@@ -23,4 +23,9 @@ public class SceneSwap : MonoBehaviour
 	{
 		SceneManager.LoadScene(next);
 	}
+
+	public void Quit()
+	{
+		Application.Quit();
+	}
 }
