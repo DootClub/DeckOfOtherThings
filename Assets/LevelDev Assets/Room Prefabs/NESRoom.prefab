@@ -393,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4650389904543352}
   m_Layer: 0
-  m_Name: SouthDoor
+  m_Name: South Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -843,7 +843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4663549398126018}
   m_Layer: 0
-  m_Name: EastRoom
+  m_Name: East Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1947,7 +1947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4940778010920142}
   m_Layer: 0
-  m_Name: NorthDoor
+  m_Name: North Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5206,7 +5206,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1004003228756286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 54, y: 25, z: 0}
+  m_LocalPosition: {x: -17.456268, y: -7.204076, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4451378509778344}
