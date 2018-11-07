@@ -1,5 +1,5 @@
-﻿	using System;
-	using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,6 +18,11 @@ public class Card : MonoBehaviour
 
 	public virtual void Start()
 	{
+	
+	}
+
+	public virtual void LevelEnter()
+	{
 		if (OnLevelEntered != null)
 		{
 			// Prompt to pick a card
@@ -30,6 +35,16 @@ public class Card : MonoBehaviour
 		{
 			// Prompt to change card
 		}
+	}
+
+	public virtual void CardActive()
+	{
+		// Override with a card's active ability
+	}
+
+	public virtual void CardPassive()
+	{
+		// Override with a card's passive ability
 	}
 
 	// Update is called once per frame
