@@ -5,9 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 93f17573f9f63c24a98e7ea3ddac9d58
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 9218704558c6cc641bb9da6f2eca3ff9
+  - enabled: 1
+    path: Assets/Scenes/CardMenu.unity
+    guid: 8494c35388f492f4ebea4a9650ed3de0
   - enabled: 1
     path: Assets/Scenes/10 room level.unity
     guid: 319f97092e31ac74c9efd22301d9cc6c
@@ -18,12 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/20 room level.unity
     guid: e0c939a22c1cb9d458ca08baa321311b
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 8494c35388f492f4ebea4a9650ed3de0
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 93f17573f9f63c24a98e7ea3ddac9d58
-  - enabled: 1
     path: Assets/Scenes/WinScreen.unity
+    guid: b95b8747c681bc04aabcadf6659d9ae6
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
     guid: d92984021a575cb47880b5f46f8bb065
   m_configObjects: {}
