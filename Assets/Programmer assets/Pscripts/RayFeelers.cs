@@ -5,20 +5,14 @@ using System;
 
 public class RayFeelers : MonoBehaviour
 {
+    public int RaycastDistance;                                                                                          // Tweak this variable in the inspector to tweak the length of the vision cone
     public event Action PlayerSeen;
-
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        //RaycastHit2D hit;
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * 10, Color.green);
-        if(Physics2D.Raycast(transform.position, transform.right, 10))
+        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right) * RaycastDistance, Color.green);
+        if(Physics2D.Raycast(transform.position, transform.right, RaycastDistance))
         {
             Debug.Log("Hit");
             PlayerSeen();
