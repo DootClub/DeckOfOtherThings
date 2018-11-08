@@ -5,7 +5,32 @@ using UnityEngine;
 
 public class CamTests : MonoBehaviour
 {
+	private GameObject[,] grid;
+
 	public List<GameObject> levelPrefabs;
+
+	void GridSetupTests()
+	{
+		grid = new GameObject[100, 100];
+
+
+		// Tests
+
+		// NOTHING there
+		if (grid[currentGridX, currentGridY] == null)
+		{
+			// Nothing there, so spawn
+			grid[currentGridX, currentGridY] = Instantiate<GameObject>(prefab);
+		}
+
+		// NOT null means you've set that grid space already
+		if (grid[currentGridX, currentGridY] != null)
+		{
+
+		}
+
+
+	}
 
 	// Use this for initialization
 	void Start()
