@@ -9,6 +9,11 @@ public class CamTests : MonoBehaviour
 
 	public List<GameObject> levelPrefabs;
 
+
+	int currentGridX;
+	int currentGridY;
+	GameObject prefab;
+
 	void GridSetupTests()
 	{
 		grid = new GameObject[100, 100];
