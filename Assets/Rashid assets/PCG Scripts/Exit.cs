@@ -2,9 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Exit : MonoBehaviour {
+public class Exit : MonoBehaviour
+{
+	public enum ExitNames
+	{
+		North,
+		South,
+		West,
+		East
+	}
+
+	public ExitNames exits;
+
+//	public bool hasEastExit;
+//	public bool hasWestExit;
+//	public bool hasNorthExit;
+//	public bool hasSouthExit;
 
 	PCGMAIN managerScript;
+
 
 	public Transform southExit;
 	public Transform northExit;
