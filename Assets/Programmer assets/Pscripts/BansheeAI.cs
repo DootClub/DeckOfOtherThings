@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BansheeAI : MonoBehaviour
+public class BansheeAI : MonoBehaviour  // Venus
 {
     // Use this for initialization
 	void Start ()

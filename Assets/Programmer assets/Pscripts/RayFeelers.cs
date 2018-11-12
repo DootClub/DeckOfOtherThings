@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class RayFeelers : MonoBehaviour
+public class RayFeelers : MonoBehaviour // Venus
 {
-    public int RaycastDistance;                                                                                          // Tweak this variable in the inspector to tweak the length of the vision cone
-    public event Action PlayerSeen;
+    public int RaycastDistance;
 	
 	// Update is called once per frame
 	void Update ()
@@ -15,7 +14,7 @@ public class RayFeelers : MonoBehaviour
         if(Physics2D.Raycast(transform.position, transform.right, RaycastDistance))
         {
             Debug.Log("Hit");
-            PlayerSeen();
+            //PlayerSeen();
         }
 	}
 }

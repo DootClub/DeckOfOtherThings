@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooter : MonoBehaviour
+public class Shooter : MonoBehaviour    // Venus
 {
     //public bool Shooting = true;
     public float FireRate;
@@ -12,20 +12,14 @@ public class Shooter : MonoBehaviour
 
     void Start()
     {
-        foreach(RayFeelers feeler in FindObjectsOfType<RayFeelers>())
+        /*foreach(RayFeelers feeler in FindObjectsOfType<RayFeelers>())
         {
             feeler.PlayerSeen += Shoot;
-        }
+        }*/
     }
 
     // Update is called once per frame
     void Update ()
-    {
-        
-        //Invoke("Shoot", ShootDelay);
-	}
-
-    void Shoot()
     {
         if (Time.time - LastFired > 1 / (FireRate / 10))
         {
@@ -33,5 +27,11 @@ public class Shooter : MonoBehaviour
             //Shoot();
             Instantiate(ObjectToSpawn, GetComponent<Transform>());
         }
+        //Invoke("Shoot", ShootDelay);
+    }
+
+    void Shoot()
+    {
+        
     }
 }

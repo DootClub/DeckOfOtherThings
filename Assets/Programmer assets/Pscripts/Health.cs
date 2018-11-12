@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour // Venus
 {
-    private int Amount;
+    private int _amount;
 
     public int HealthAmount;
     public event Action OnDeath;
@@ -22,13 +22,16 @@ public class Health : MonoBehaviour
 		
 	}
 
-    int Change(int Difference)
+    int Change(int difference)
     {
         int Total;
-        Total = Amount + Difference;
+        Total = _amount + difference;
         if(Total <= 0)
         {
-            OnDeath();
+            if (OnDeath != null)
+            {
+                OnDeath();
+            }
         }
         return Total;
     }
