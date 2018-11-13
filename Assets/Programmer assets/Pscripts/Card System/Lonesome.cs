@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Written by Tegan Walsh-Jones
 public class Lonesome : Card
 {
 

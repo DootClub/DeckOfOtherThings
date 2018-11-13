@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Written by Tegan Walsh-Jones
 public class Card : MonoBehaviour
 {
 	public event Action<Card> OnLevelEntered;
