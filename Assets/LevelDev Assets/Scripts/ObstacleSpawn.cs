@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//written by Luke
 public class ObstacleSpawn : MonoBehaviour
 {
 	public GameObject[] obstaclePrefab;

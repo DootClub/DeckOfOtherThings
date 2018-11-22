@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//written by Luke
 public class DoorCloseTrigger : MonoBehaviour
 {
 	public Door door;
