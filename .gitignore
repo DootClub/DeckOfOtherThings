@@ -34,3 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/LevelDev Assets/Scripts/GameManager1.cs.meta
+Assets/LevelDev Assets/Scripts/GameManager1.cs
+Assets/LevelDev Assets/Sprites/Animations/water1anim.anim.meta
+Assets/LevelDev Assets/Sprites/Animations/water1anim.anim
