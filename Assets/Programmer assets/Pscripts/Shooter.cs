@@ -16,6 +16,7 @@ public class Shooter : MonoBehaviour    // Venus
         {
             feeler.PlayerSeen += Shoot;
         }*/
+        //FindObjectOfType<BaseCardScript>().SomeEvent += SetDPS;
     }
 
     // Update is called once per frame
@@ -33,5 +34,10 @@ public class Shooter : MonoBehaviour    // Venus
     void Shoot()
     {
         
+    }
+
+    void SetDPS(int fireRate)
+    {
+        FireRate = fireRate;
     }
 }

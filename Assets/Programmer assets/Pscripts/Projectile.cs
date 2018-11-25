@@ -7,18 +7,16 @@ public class Projectile : MonoBehaviour // Venus
 {
     // Setting up variables...
     private Vector2 _speedVector;
-    //private GameObject ;
 
     public float Speed;
     public float DespawnTime;
-    //public float MaxDistance;
-    //public Vector2 StartPos;
     public event Action<int> HitPlayer;
     public GameObject Self;
 
 	// Use this for initialization
 	void Start ()
     {
+        //FindObjectOfType<baseCard>().SomeEvent += SetSpeed;
         _speedVector.x = Speed;
         Invoke("Despawn", DespawnTime);
 	}
@@ -27,7 +25,6 @@ public class Projectile : MonoBehaviour // Venus
 	void Update ()
     {
         GetComponent<Rigidbody2D>().AddRelativeForce(_speedVector);
-        //if (transform.t)
 	}
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -42,4 +39,9 @@ public class Projectile : MonoBehaviour // Venus
     {
         Destroy(Self);
     }
+
+    /*void SetSpeed(float speed)
+    {
+        _speedVector.x = speed;
+    }*/
 }
