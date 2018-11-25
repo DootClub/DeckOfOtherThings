@@ -10,7 +10,7 @@ public class TouchControls : MonoBehaviour
 
 	private Vector2 targetPos;
 
-	private float speed = 6f;
+	public float speed = 6f;
 
 	Animator animator;
 
