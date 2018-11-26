@@ -11,7 +11,6 @@ public class Projectile : MonoBehaviour // Venus
     public float Speed;
     public float DespawnTime;
     public event Action<int> HitPlayer;
-    public GameObject Self;
 
 	// Use this for initialization
 	void Start ()
@@ -37,7 +36,7 @@ public class Projectile : MonoBehaviour // Venus
 
     void Despawn()
     {
-        Destroy(Self);
+        Destroy(gameObject);
     }
 
     /*void SetSpeed(float speed)
