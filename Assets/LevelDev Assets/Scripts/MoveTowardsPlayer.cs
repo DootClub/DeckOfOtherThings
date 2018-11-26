@@ -29,7 +29,7 @@ public class MoveTowardsPlayer : MonoBehaviour
 		
 	}
 
-	//this doesn't work :(
+	
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.GetComponent<BasePlayerStats>())
