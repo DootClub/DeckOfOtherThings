@@ -5,6 +5,7 @@ using UnityEngine;
 //written by Luke
 public class ObstacleSpawn : MonoBehaviour
 {
+	public GameObject self;
 	public GameObject[] obstaclePrefab;
 	public GameObject prefab;
 	public GameObject room;
@@ -13,6 +14,9 @@ public class ObstacleSpawn : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+
+		room = self.transform.parent.gameObject;
+
 		prefab = obstaclePrefab[Random.Range(0, obstaclePrefab.Length)];
 
 		Transform localpos = room.transform;
