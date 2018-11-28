@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //written by Luke
 public class HealthBar : MonoBehaviour
@@ -22,6 +23,11 @@ public class HealthBar : MonoBehaviour
 	void Update ()
 	{
 		bar.value = playerHP.HealthAmount;
+
+		if(bar.value <= 0)
+		{
+			SceneManager.LoadScene("LoseScreen");
+		}
 	}
 
 	

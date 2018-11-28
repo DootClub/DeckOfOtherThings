@@ -12,15 +12,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 9218704558c6cc641bb9da6f2eca3ff9
   - enabled: 1
+    path: Assets/Scenes/Premade Levels/10Room.unity
+    guid: b535a0458b13ec64f8dfe08bc7c44a66
+  - enabled: 1
+    path: Assets/Scenes/Premade Levels/15Room.unity
+    guid: 7bd864c1fa55fd847a84ba31533dce8d
+  - enabled: 0
     path: Assets/Scenes/CardMenu.unity
     guid: 8494c35388f492f4ebea4a9650ed3de0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/10 room level.unity
     guid: 319f97092e31ac74c9efd22301d9cc6c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/15 room level.unity
     guid: 4d4f90271df9c824e9184818c3126e51
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/20 room level.unity
     guid: e0c939a22c1cb9d458ca08baa321311b
   - enabled: 1

@@ -56,5 +56,7 @@ MonoBehaviour:
   - {fileID: 1122242609465446, guid: 95e6c2b868330c94082161874d625b3d, type: 2}
   - {fileID: 1185454788760066, guid: 2f0cbc33dd0b43c45947a4d07b35a7be, type: 2}
   - {fileID: 1259203386902326, guid: c1c06e69b900b2c44a89b1134f8f2272, type: 2}
+  - {fileID: 1593454243742540, guid: 375fde78ec8e38349aafe87b100a9a2c, type: 2}
+  - {fileID: 1518511453024662, guid: 2874e6203b115ca4d9dd3c434fc00b76, type: 2}
   prefab: {fileID: 0}
   room: {fileID: 0}
