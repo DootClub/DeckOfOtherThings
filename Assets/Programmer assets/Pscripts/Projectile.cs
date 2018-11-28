@@ -23,7 +23,6 @@ public class Projectile : MonoBehaviour // Venus
 	// Update is called once per frame
 	void Update ()
 	{
-	    //GetComponent<Rigidbody2D>().velocity = _speedVector;
 	    //GetComponent<Rigidbody2D>().AddRelativeForce(_speedVector);
         transform.Translate((Vector3.right*Time.deltaTime*Speed));
 	}

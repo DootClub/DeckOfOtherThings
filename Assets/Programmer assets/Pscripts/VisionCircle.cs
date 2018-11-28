@@ -24,7 +24,10 @@ public class VisionCircle : MonoBehaviour   // Venus
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        transform.right = other.transform.position - transform.position;
+        if (other.tag == "Enemy")
+        {
+            transform.right = other.transform.position - transform.position;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +44,9 @@ public class VisionCircle : MonoBehaviour   // Venus
         //Vector3 OwnPos = GetComponent<Transform>();
         /*Vector3.RotateTowards(transform.position, collision.transform.position, 0, Mathf.PI);
         Vector2.*/
-        transform.right = collision.transform.position - transform.position;
+        if (collision.tag == "Enemy")
+        {
+            transform.right = collision.transform.position - transform.position;
+        }
     }
 }
