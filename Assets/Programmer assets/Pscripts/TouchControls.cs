@@ -26,7 +26,7 @@ public class TouchControls : MonoBehaviour
 	void Update ()
 	{
 		// Detect mouse position
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButton(0))
 		{
 			// Sets targetPos to the clicked position
 			targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -34,14 +34,14 @@ public class TouchControls : MonoBehaviour
 		}
 		
 		// Detect touch input
-		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
-		{
+		//if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+		//{
 			// Set touchPos to the touched position
-			Vector2 touchPos = Input.GetTouch(0).deltaPosition;
+		//	Vector2 touchPos = Input.GetTouch(0).deltaPosition;
 			// Set targetPos to the touched positiong
-			targetPos = Camera.main.ScreenToWorldPoint(touchPos);
-			target.position = targetPos;
-		}
+		//	targetPos = Camera.main.ScreenToWorldPoint(touchPos);
+		//	target.position = targetPos;
+		//}
 		
 		// If the player isn't at its target position, move it towards the target position
 		if ((Vector2) transform.position != targetPos)
