@@ -33,15 +33,17 @@ public class TouchControls : MonoBehaviour
 			target.position = targetPos;
 		}
 		
+		/*
 		// Detect touch input
-		//if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
-		//{
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+		{
 			// Set touchPos to the touched position
-		//	Vector2 touchPos = Input.GetTouch(0).deltaPosition;
+			Vector2 touchPos = Input.GetTouch(0).deltaPosition;
 			// Set targetPos to the touched positiong
-		//	targetPos = Camera.main.ScreenToWorldPoint(touchPos);
-		//	target.position = targetPos;
-		//}
+			targetPos = Camera.main.ScreenToWorldPoint(touchPos);
+			target.position = targetPos;
+		}
+		*/
 		
 		// If the player isn't at its target position, move it towards the target position
 		if ((Vector2) transform.position != targetPos)

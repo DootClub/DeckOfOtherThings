@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Written by Tegan Walsh-Jones
 public class Lonesome : CardBase
 {
-
 	// Use this for initialization
 	void Start ()
 	{
-		
+		ChangeHealth();
+		ChangeMoveSpeed();
 	}
 	
 	// Update is called once per frame
@@ -17,13 +18,17 @@ public class Lonesome : CardBase
 		
 	}
 
-	public override void Health()
+	public override void ChangeHealth()
 	{
-		health.HealthAmount = 100;
+		playerHealth = FindObjectOfType<Health>();
+
+		playerHealth.HealthAmount = 100;
 	}
 
-	public override void MoveSpeed ()
+	public override void ChangeMoveSpeed ()
 	{
-		moveSpeed.speed = 6f;
+		playerMoveSpeed = FindObjectOfType<TouchControls>();
+
+		playerMoveSpeed.speed = 6;
 	}
 }

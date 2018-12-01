@@ -129,12 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b6041b6b3d6ef41a04f8544b046ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllCards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  moveSpeed: {fileID: 0}
-  health: {fileID: 0}
+  playerHealth: {fileID: 0}
+  playerMoveSpeed: {fileID: 0}
 --- !u!114 &212937213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,12 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aa92780446a282438c0a4af2ed7d8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllCards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  moveSpeed: {fileID: 0}
-  health: {fileID: 0}
+  playerHealth: {fileID: 0}
+  playerMoveSpeed: {fileID: 0}
 --- !u!1001 &461736465
 Prefab:
   m_ObjectHideFlags: 0
@@ -209,12 +201,16 @@ Prefab:
     - target: {fileID: 114779154154277074, guid: f3030db7cf4e3034f95318eabe22d624,
         type: 2}
       propertyPath: speed
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 223368529602974978, guid: f3030db7cf4e3034f95318eabe22d624,
         type: 2}
       propertyPath: m_SortingOrder
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401477062191528, guid: f3030db7cf4e3034f95318eabe22d624, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3030db7cf4e3034f95318eabe22d624, type: 2}
