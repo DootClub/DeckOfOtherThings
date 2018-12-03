@@ -9,7 +9,7 @@ public class AnimationState : MonoBehaviour
 	public Vector2 newPos;
 	public Transform player;
 	Animator animator;
-	float timer = 0.2F;
+	float timer = 1F;
 
 	// Use this for initialization
 	void Start ()
@@ -25,16 +25,16 @@ public class AnimationState : MonoBehaviour
 	{
 		timer -= Time.deltaTime;
 		prevPos = player.localPosition;
-		if(timer <= 0)
+		while(timer <= 0)
 		{
-			timer = 0.2F;
+			timer = 1F;
 			newPos = player.localPosition;
 			
 			if(newPos.x <= prevPos.x)
 			{
 				print("moving left");
 			}
-			else
+			if(newPos.x >= prevPos.x)
 			{
 				print("moving right");
 			}
