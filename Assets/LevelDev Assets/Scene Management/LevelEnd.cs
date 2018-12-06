@@ -6,6 +6,7 @@ public class LevelEnd : SceneSwap
 {
 	public GameObject SelfTarget;
 	public BasePlayerStats player;
+    public Analytics DoTheCheckThing;
 
 	// Use this for initialization
 	void Start ()
@@ -22,7 +23,9 @@ public class LevelEnd : SceneSwap
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.GetComponent<BasePlayerStats>())
-		{
+        {
+            DoTheCheckThing = collision.gameObject.GetComponent<Analytics>();
+            DoTheCheckThing.HitDoor();
 			ChangeScene();
 			print("BEEP");
 		}
