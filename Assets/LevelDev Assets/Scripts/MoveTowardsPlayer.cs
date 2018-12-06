@@ -11,6 +11,7 @@ public class MoveTowardsPlayer : MonoBehaviour
 	public Health opposingHealth;
 	public GameObject SelfTarget;
 	public int damage;
+    public Analytics CustomAnalyser;
 
 	// Use this for initialization
 	void Start ()
@@ -33,7 +34,9 @@ public class MoveTowardsPlayer : MonoBehaviour
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.GetComponent<BasePlayerStats>())
-        { 
+        {
+            CustomAnalyser = collision.gameObject.GetComponent<Analytics>();
+            CustomAnalyser.HitEnemy();
 			print("I'VE COLLIDEDDDD");
             GetComponent<Health>().Change(-100);
 		}
