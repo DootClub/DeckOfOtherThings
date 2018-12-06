@@ -13,8 +13,9 @@ public class Pickup : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		opposingHP = FindObjectOfType<Health>();
+
 		player = FindObjectOfType<BasePlayerStats>();
+		opposingHP = player.GetComponent<Health>();
 	}
 
 	// Update is called once per frame
