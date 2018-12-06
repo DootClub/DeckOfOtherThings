@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805ea1dc15bce544c94e261a1c1a74dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  other: {fileID: 0}
+  player: {fileID: 0}
   sightRange: 7
   self: {fileID: 0}
 --- !u!114 &114279864022745210

@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class DetectPlayer : MonoBehaviour
 {
-	public Transform other;
+	public BasePlayerStats player;
 	float dist;
 	public float sightRange; 
 	public MoveTowardsPlayer self;
+
 
 	// Use this for initialization
 	void Start ()
 	{
 		self = GetComponent<MoveTowardsPlayer>();
 		self.enabled = false;
+		player = FindObjectOfType<BasePlayerStats>();
 	}
 	
 	// Update is called once per frame
@@ -35,9 +37,9 @@ public class DetectPlayer : MonoBehaviour
 
 	void Distance()
 	{
-		if (other)
+		if (player)
 		{
-			dist = Vector2.Distance(other.position, transform.position);
+			dist = Vector2.Distance(player.transform.position, transform.position);
 		}
 	}
 	
