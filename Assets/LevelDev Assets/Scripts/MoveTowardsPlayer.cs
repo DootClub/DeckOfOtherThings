@@ -12,8 +12,15 @@ public class MoveTowardsPlayer : MonoBehaviour
 	public GameObject SelfTarget;
 	public int damage;
 
-	// Use this for initialization
-	void Start ()
+
+
+    public AudioClip clip;
+    public AudioSource Source;
+    private float volLowRange = .5f;
+    private float volHighRange = 1.0f;
+
+    // Use this for initialization
+    void Start ()
 	{
 		player = FindObjectOfType<BasePlayerStats>();
 		opposingHealth = player.GetComponent<Health>();
@@ -39,9 +46,20 @@ public class MoveTowardsPlayer : MonoBehaviour
 		}
 	}
 
-	public void Die()
-	{
-		opposingHealth.HealthAmount -= damage;
+
+
+    public void Die()
+    {
+        GetComponent<BoxCollider2D>().enabled = false;
+        //GetComponent<>()
+        StartCoroutine(DestroyEnemy());
+        
+    }
+
+    private IEnumerator DestroyEnemy()
+    {
+        opposingHealth.HealthAmount -= damage;
+        yield return new WaitForSeconds(1);
         Destroy(SelfTarget);
-	}
+    }
 }

@@ -31,7 +31,7 @@ public class DetectPlayer : MonoBehaviour
 		else
 		{
 			self.enabled = false;
-//			print("o fuk where u go");
+//  			print("o fuk where u go");
 		}
 	}
 
