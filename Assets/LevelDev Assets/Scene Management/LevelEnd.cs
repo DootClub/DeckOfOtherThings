@@ -24,8 +24,8 @@ public class LevelEnd : SceneSwap
 	{
 		if (collision.GetComponent<BasePlayerStats>())
         {
-          //  DoTheCheckThing = collision.gameObject.GetComponent<Analytics>();
-          //  DoTheCheckThing.HitDoor();
+            DoTheCheckThing = collision.gameObject.GetComponent<Analytics>();
+            DoTheCheckThing.HitDoor();
 			ChangeScene();
 			print("BEEP");
 		}
