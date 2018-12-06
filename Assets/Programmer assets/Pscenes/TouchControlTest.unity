@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 212937213}
   - component: {fileID: 212937217}
   - component: {fileID: 212937218}
+  - component: {fileID: 212937219}
   m_Layer: 0
   m_Name: _Player_
   m_TagString: Player
@@ -254,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85a59b1acf349e48a9824742874d8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthAmount: 0
+  healthAmount: 0
 --- !u!114 &212937210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +312,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   playerMoveSpeed: {fileID: 0}
+  lonesome: {fileID: 0}
+  bulwark: {fileID: 0}
+  dreamer: {fileID: 0}
 --- !u!114 &212937213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +328,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   playerMoveSpeed: {fileID: 0}
+  lonesome: {fileID: 0}
+  bulwark: {fileID: 0}
+  dreamer: {fileID: 0}
 --- !u!61 &212937214
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -425,6 +432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   playerMoveSpeed: {fileID: 0}
+  lonesome: {fileID: 0}
+  bulwark: {fileID: 0}
+  dreamer: {fileID: 0}
 --- !u!114 &212937218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,6 +448,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   playerMoveSpeed: {fileID: 0}
+  lonesome: {fileID: 0}
+  bulwark: {fileID: 0}
+  dreamer: {fileID: 0}
+--- !u!114 &212937219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 212937202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697cb7956923e53479c253eeebdc974b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+  playerMoveSpeed: {fileID: 0}
+  lonesome: {fileID: 0}
+  bulwark: {fileID: 0}
+  dreamer: {fileID: 0}
+  currentCard: {fileID: 0}
 --- !u!1 &306442706
 GameObject:
   m_ObjectHideFlags: 0

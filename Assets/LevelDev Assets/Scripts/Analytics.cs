@@ -15,11 +15,17 @@ public class Analytics : MonoBehaviour
     {
         if (Death)
         {
-            print("I deaded");
+            UnityEngine.Analytics.AnalyticsEvent.Custom("Death", new Dictionary<string, object>
+            {
+
+            });
         }
         else
         {
-            print("Enemy Count = " + EnemyCount);
+            UnityEngine.Analytics.AnalyticsEvent.Custom("LevelComplete", new Dictionary<string, object>
+            {
+                {"Enemies Hit", EnemyCount}
+            });
         }
     }
 
