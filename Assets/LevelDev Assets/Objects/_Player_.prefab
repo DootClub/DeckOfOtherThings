@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 50451088535636062}
   - component: {fileID: 114786224345324586}
   - component: {fileID: 114018125703356188}
+  - component: {fileID: 114481177688253240}
   - component: {fileID: 111579541801795434}
   - component: {fileID: 95875857726238514}
   - component: {fileID: 114779154154277074}
@@ -650,6 +651,19 @@ MonoBehaviour:
   prevPos: {x: 0, y: 0}
   newPos: {x: 0, y: 0}
   player: {fileID: 4887981298086200}
+  animator: {fileID: 0}
+  timer: 1
+--- !u!114 &114481177688253240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1864183162770014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21b7f8e8c38e40a41b6eeb2ed0b023d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114714872037612936
 MonoBehaviour:
   m_ObjectHideFlags: 1
