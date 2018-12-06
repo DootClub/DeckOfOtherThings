@@ -5,9 +5,23 @@ using System;
 
 public class Health : MonoBehaviour // Venus
 {
-    private int _amount;
+    [SerializeField]
+    private int healthAmount;
 
-    public int HealthAmount;
+    public int HealthAmount
+    {
+        get
+        {
+            return healthAmount;
+        }
+
+        set
+        {
+            Change(value - healthAmount); // Stupid HACK
+            healthAmount = value;
+        }
+    }
+
     public event Action OnDeath;
     
 	// Use this for initialization
@@ -22,10 +36,10 @@ public class Health : MonoBehaviour // Venus
 		
 	}
 
-    int Change(int difference)
+    public int Change(int difference)
     {
         int Total;
-        Total = _amount + difference;
+        Total = healthAmount + difference;
         if(Total <= 0)
         {
             if (OnDeath != null)

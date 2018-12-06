@@ -42,6 +42,6 @@ public class MoveTowardsPlayer : MonoBehaviour
 	public void Die()
 	{
 		opposingHealth.HealthAmount -= damage;
-		Destroy(SelfTarget);
+        Destroy(SelfTarget);
 	}
 }

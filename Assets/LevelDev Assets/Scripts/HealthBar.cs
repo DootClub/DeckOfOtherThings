@@ -23,12 +23,14 @@ public class HealthBar : MonoBehaviour
 	void Update ()
 	{
 		bar.value = playerHP.HealthAmount;
+        // TODO: CAM: Removed this, put it in a proper GameManager object. 
+        /*
+                if(bar.value <= 0)
+                {
+                    SceneManager.LoadScene("LoseScreen");
+                }
+        */
+    }
 
-		if(bar.value <= 0)
-		{
-			SceneManager.LoadScene("LoseScreen");
-		}
-	}
 
-	
 }
