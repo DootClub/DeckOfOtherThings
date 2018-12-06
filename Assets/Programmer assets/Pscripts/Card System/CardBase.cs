@@ -8,12 +8,20 @@ public class CardBase : MonoBehaviour
 {
 	public Health playerHealth;
 	public TouchControls playerMoveSpeed;
+
+	public Lonesome lonesome;
+	public Bulwark bulwark;
+	public Dreamer dreamer;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		playerHealth = FindObjectOfType<Health>();
 		playerMoveSpeed = FindObjectOfType<TouchControls>();
+
+		lonesome = FindObjectOfType<Lonesome>();
+		bulwark = FindObjectOfType<Bulwark>();
+		dreamer = FindObjectOfType<Dreamer>();
 	}
 	
 	// Update is called once per frame
