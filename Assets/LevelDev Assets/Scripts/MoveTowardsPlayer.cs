@@ -9,7 +9,6 @@ public class MoveTowardsPlayer : MonoBehaviour
 	public float moveSpeed;
 	public BasePlayerStats player;
 	public Health opposingHealth;
-	public MoveTowardsPlayer self;
 	public GameObject SelfTarget;
 	public int damage;
 
@@ -17,8 +16,7 @@ public class MoveTowardsPlayer : MonoBehaviour
 	void Start ()
 	{
 		player = FindObjectOfType<BasePlayerStats>();
-		self = FindObjectOfType<MoveTowardsPlayer>();
-		opposingHealth = FindObjectOfType<Health>();
+		opposingHealth = player.GetComponent<Health>();
 		
 	}
 
@@ -34,6 +32,7 @@ public class MoveTowardsPlayer : MonoBehaviour
 	{
 		if (collision.GetComponent<BasePlayerStats>())
 		{
+			//should move this to gamemanager
 			Die();
 			print("I'VE COLLIDEDDDD");
 		}
