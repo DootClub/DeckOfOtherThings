@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Audio : MonoBehaviour {
 
-    public AudioClip Walk;
+    public AudioClip clip;
     public AudioSource Source;
     private float volLowRange = .5f;
     private float volHighRange = 1.0f;
@@ -15,15 +15,21 @@ public class Audio : MonoBehaviour {
     void Awake ()
     {
         Source = GetComponent<AudioSource>();
+        GetComponent<Health>().OnDeath += Audio_OnDeath;
 	}
-	
-	//void Input ()
 
-    
-    // Update is called once per frame
-	void Update ()
+    private void Audio_OnDeath()
     {
-        Source.PlayOneShot(Walk, volHighRange); 
+        Source.Play();
+    }
+
+    //void Input ()
+
+
+    // Update is called once per frame
+    void Update ()
+    {
+        
 	}
 
 
