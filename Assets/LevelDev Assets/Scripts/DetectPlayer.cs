@@ -26,12 +26,12 @@ public class DetectPlayer : MonoBehaviour
 		if (dist <= sightRange)
 		{
 			self.enabled = true;
-			print("I'M COMIN FOR YA");
+			//print("I'M COMIN FOR YA");
 		}
 		else
 		{
 			self.enabled = false;
-			print("o fuk where u go");
+			//print("o fuk where u go");
 		}
 	}
 

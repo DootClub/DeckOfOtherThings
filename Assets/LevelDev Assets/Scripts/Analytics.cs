@@ -19,7 +19,7 @@ public class Analytics : MonoBehaviour
         }
         else
         {
-            print(EnemyCount);
+            print("Enemy Count = " + EnemyCount);
         }
     }
 
