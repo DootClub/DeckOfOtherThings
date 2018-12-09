@@ -42,8 +42,6 @@ public class MoveTowardsPlayer : MonoBehaviour
 	{
 		if (collision.GetComponent<BasePlayerStats>())
         {
-            CustomAnalyser = collision.gameObject.GetComponent<Analytics>();
-            CustomAnalyser.HitEnemy();
 			print("I'VE COLLIDEDDDD");
             GetComponent<Health>().Change(-100);
 		}
@@ -53,8 +51,14 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     public void Die()
     {
-        GetComponent<BoxCollider2D>().enabled = false;
-        //GetComponent<>()
+        Destroy(GetComponent<Rigidbody2D>());
+        //Destroy(GetComponent<BoxCollider2D>());
+        BoxCollider2D[] Boxes = GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D thing in Boxes)
+        {
+            Destroy(thing);
+        }
+        GetComponent<SpriteRenderer>().enabled = false;
         StartCoroutine(DestroyEnemy());
         
     }
@@ -62,7 +66,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     private IEnumerator DestroyEnemy()
     {
         opposingHealth.HealthAmount -= damage;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         Destroy(SelfTarget);
     }
 }

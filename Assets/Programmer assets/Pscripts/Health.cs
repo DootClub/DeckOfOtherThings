@@ -40,7 +40,7 @@ public class Health : MonoBehaviour // Venus
     {
         int Total;
         Total = healthAmount + difference;
-        if(Total <= 0)
+        if (Total <= 0)
         {
             if (OnDeath != null)
             {
