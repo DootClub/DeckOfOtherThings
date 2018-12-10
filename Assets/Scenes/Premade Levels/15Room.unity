@@ -1349,7 +1349,7 @@ Prefab:
     - target: {fileID: 114513119551537952, guid: 3a0959731413eb444affcb6bd2a0b291,
         type: 2}
       propertyPath: next
-      value: WinScreen
+      value: 3rdLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a0959731413eb444affcb6bd2a0b291, type: 2}
@@ -3195,7 +3195,7 @@ Prefab:
     - target: {fileID: 114513119551537952, guid: 3a0959731413eb444affcb6bd2a0b291,
         type: 2}
       propertyPath: next
-      value: WinScreen
+      value: 3rdLevel
       objectReference: {fileID: 0}
     - target: {fileID: 1309915043317000, guid: 3a0959731413eb444affcb6bd2a0b291, type: 2}
       propertyPath: m_Name
