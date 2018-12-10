@@ -8,6 +8,7 @@ public class DetectPlayer : MonoBehaviour
 	float dist;
 	public float sightRange; 
 	public MoveTowardsPlayer self;
+	Animator animator;
 
 
 	// Use this for initialization
@@ -16,6 +17,7 @@ public class DetectPlayer : MonoBehaviour
 		self = GetComponent<MoveTowardsPlayer>();
 		self.enabled = false;
 		player = FindObjectOfType<BasePlayerStats>();
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -26,12 +28,14 @@ public class DetectPlayer : MonoBehaviour
 		if (dist <= sightRange)
 		{
 			self.enabled = true;
-//			print("I'M COMIN FOR YA");
+			//print("I'M COMIN FOR YA");
+			animator.SetBool("IsMoving", true);
 		}
 		else
 		{
 			self.enabled = false;
-//  			print("o fuk where u go");
+			//print("o fuk where u go");
+			animator.SetBool("IsMoving", false);
 		}
 	}
 
