@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="Bank" id="{32be7f2a-fb19-4caf-8061-87688aff94e8}">
+        <property name="name">
+            <value>Player DMGBank</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2e582d79-470d-4e0b-b3d6-c437490e2537}</destination>
+        </relationship>
+    </object>
+</objects>
