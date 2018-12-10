@@ -115,7 +115,7 @@ MonoBehaviour:
   player: {fileID: 0}
   opposingHP: {fileID: 0}
   self: {fileID: 1164346045443086}
-  addedHP: 10
+  addedHP: 20
 --- !u!212 &212384954819140226
 SpriteRenderer:
   m_ObjectHideFlags: 1
