@@ -33,8 +33,8 @@ public class Health : MonoBehaviour // Venus
 	// Update is called once per frame
 	void Update ()
     {
-		
-	}
+        healthAmount = Mathf.Clamp(healthAmount, 0, 100);
+    }
 
     public int Change(int difference)
     {
