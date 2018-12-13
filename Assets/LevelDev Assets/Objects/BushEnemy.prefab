@@ -46,7 +46,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1926411555212910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.21, y: -0.35, z: 0}
+  m_LocalPosition: {x: 17.680893, y: 7.087125, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85a59b1acf349e48a9824742874d8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmount: 10
+  healthAmount: 20
 --- !u!114 &114279864022745210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,14 +287,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.05
+  moveSpeedBackup: 0.05
+  isPause: 0
   player: {fileID: 0}
   opposingHealth: {fileID: 0}
   SelfTarget: {fileID: 1926411555212910}
   damage: 10
   CustomAnalyser: {fileID: 0}
+  Pauser: {fileID: 0}
   clip: {fileID: 0}
   Source: {fileID: 0}
-  iTimer: 0.2
 --- !u!114 &114283733868954080
 MonoBehaviour:
   m_ObjectHideFlags: 1

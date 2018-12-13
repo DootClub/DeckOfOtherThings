@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 //written by Luke
 public class MoveTowardsPlayer : MonoBehaviour
 {
 	public float moveSpeed;
+    public float moveSpeedBackup;
+    public bool isPause;
 	public BasePlayerStats player;
 	public Health opposingHealth;
 	public GameObject SelfTarget;
 	public int damage;
     public Analytics CustomAnalyser;
+    public PauseMenu Pauser;
 
 
 
@@ -26,7 +30,12 @@ public class MoveTowardsPlayer : MonoBehaviour
 		player = FindObjectOfType<BasePlayerStats>();
 		opposingHealth = player.GetComponent<Health>();
 
+        //Pauser = FindObjectOfType<PauseMenu>();
 
+        FindObjectOfType<PauseMenu>().BeenPaused += onPause;
+        isPause = false;
+
+        moveSpeed = moveSpeedBackup;
         GetComponent<Health>().OnDeath += Die;
     }
 
@@ -34,8 +43,9 @@ public class MoveTowardsPlayer : MonoBehaviour
     void Update ()
 	{
 		transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
-		
-	}
+        
+
+    }
 
 
 
@@ -56,6 +66,21 @@ public class MoveTowardsPlayer : MonoBehaviour
 		}
 	}
 
+    public void onPause()
+    {
+        if (isPause)
+        {
+            
+            isPause = false;
+            moveSpeed = moveSpeedBackup;
+        }
+        else
+        {
+            
+            isPause = true;
+            moveSpeed = 0;
+        }
+    }
 
 	public void Die()
     {

@@ -4,6 +4,7 @@ using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 // Written by Tegan Walsh-Jones
 public class PauseMenu : MonoBehaviour
@@ -13,6 +14,8 @@ public class PauseMenu : MonoBehaviour
 	public static bool gameIsPaused = false;
 
 	[SerializeField] private Button pauseButton;
+
+    public event Action BeenPaused;
 
 	// Use this for initialization
 	void Start()
@@ -31,7 +34,9 @@ public class PauseMenu : MonoBehaviour
 	}
 
 	void PauseOnClick ()
-	{
+    {
+        
+
 		if (gameIsPaused)
 		{
 			Resume();
@@ -47,15 +52,17 @@ public class PauseMenu : MonoBehaviour
 	{
 		pauseMenu.GetComponent<Canvas>().enabled = false;
 		Time.timeScale = 1f;
-		gameIsPaused = false;
-	}
+        gameIsPaused = false;
+        BeenPaused();
+    }
 
 	public void Pause ()
 	{
 		pauseMenu.GetComponent<Canvas>().enabled = true;
 		Time.timeScale = 0f;
 		gameIsPaused = true;
-	}
+        BeenPaused();
+    }
 
 	public void LoadMainMenu ()
 	{
