@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour // Venus
 	void Update ()
 	{
 	    //GetComponent<Rigidbody2D>().AddRelativeForce(_speedVector);
-        transform.Translate((Vector3.right*Time.deltaTime*Speed));
+        transform.Translate(new Vector3(1,0,0)* Time.deltaTime*Speed, Space.Self);  //Turns out i was rotating twice using this
 	}
 
     void OnTriggerEnter2D(Collider2D collision)

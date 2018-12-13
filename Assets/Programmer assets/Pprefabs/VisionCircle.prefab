@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1672743223594026}
+  m_RootGameObject: {fileID: 1235871283046326}
   m_IsPrefabAsset: 1
---- !u!1 &1456744760336418
+--- !u!1 &1025849982951974
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4401454694777582}
-  - component: {fileID: 114440761653386092}
+  - component: {fileID: 4020125707908226}
+  - component: {fileID: 114019593449805228}
   m_Layer: 0
   m_Name: Shooter
   m_TagString: Untagged
@@ -27,56 +27,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1672743223594026
+--- !u!1 &1235871283046326
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4013440224149272}
-  - component: {fileID: 58143987164671618}
-  - component: {fileID: 114452905064418134}
+  - component: {fileID: 4037715969506808}
+  - component: {fileID: 58869496876475564}
+  - component: {fileID: 114541381990371988}
   m_Layer: 0
   m_Name: VisionCircle
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4013440224149272
+--- !u!4 &4020125707908226
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1672743223594026}
-  m_LocalRotation: {x: -0.0000001024755, y: 0.000000043570132, z: 0.31913647, w: 0.94770885}
-  m_LocalPosition: {x: 5.04, y: -1.9, z: 0}
-  m_LocalScale: {x: 5.011, y: 5.011, z: 5.011}
-  m_Children:
-  - {fileID: 4401454694777582}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 37.221}
---- !u!4 &4401454694777582
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1456744760336418}
+  m_GameObject: {fileID: 1025849982951974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.203, y: 0, z: 0}
   m_LocalScale: {x: 0.19956096, y: 0.19956096, z: 0.19956096}
   m_Children: []
-  m_Father: {fileID: 4013440224149272}
+  m_Father: {fileID: 4037715969506808}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58143987164671618
+--- !u!4 &4037715969506808
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235871283046326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.576277, y: -6.2359324, z: 0}
+  m_LocalScale: {x: 5.011, y: 5.011, z: 5.011}
+  m_Children:
+  - {fileID: 4020125707908226}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58869496876475564
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1672743223594026}
+  m_GameObject: {fileID: 1235871283046326}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -86,12 +86,12 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &114440761653386092
+--- !u!114 &114019593449805228
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1456744760336418}
+  m_GameObject: {fileID: 1025849982951974}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 375a4af501a13f2478cae5ef55505ab1, type: 3}
@@ -100,12 +100,12 @@ MonoBehaviour:
   FireRate: 9
   ObjectToSpawn: {fileID: 1735742169106684, guid: 0fbf5ef7deb47164b874897abbb48810,
     type: 2}
---- !u!114 &114452905064418134
+--- !u!114 &114541381990371988
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1672743223594026}
+  m_GameObject: {fileID: 1235871283046326}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2c96b6943176944fbe6d133720feec6, type: 3}
