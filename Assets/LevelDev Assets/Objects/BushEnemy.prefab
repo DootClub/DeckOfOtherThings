@@ -34,7 +34,7 @@ GameObject:
   - component: {fileID: 61623454878618050}
   m_Layer: 0
   m_Name: BushEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85a59b1acf349e48a9824742874d8ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthAmount: 100
+  healthAmount: 10
 --- !u!114 &114279864022745210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,6 +294,7 @@ MonoBehaviour:
   CustomAnalyser: {fileID: 0}
   clip: {fileID: 0}
   Source: {fileID: 0}
+  iTimer: 0.2
 --- !u!114 &114283733868954080
 MonoBehaviour:
   m_ObjectHideFlags: 1

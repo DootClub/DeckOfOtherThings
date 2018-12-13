@@ -37,6 +37,8 @@ public class MoveTowardsPlayer : MonoBehaviour
 		
 	}
 
+
+
 	
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
@@ -44,29 +46,37 @@ public class MoveTowardsPlayer : MonoBehaviour
         {
 			print("I'VE COLLIDEDDDD");
             GetComponent<Health>().Change(-100);
+			opposingHealth.HealthAmount -= damage;
+		}
+
+		if(collision.tag == "Projectile")
+		{
+			SelfTarget.GetComponent<Health>().HealthAmount -= 10;
+			print("ouch bro");
 		}
 	}
 
 
-
-    public void Die()
+	public void Die()
     {
-        Destroy(GetComponent<Rigidbody2D>());
-        //Destroy(GetComponent<BoxCollider2D>());
-        BoxCollider2D[] Boxes = GetComponents<BoxCollider2D>();
-        foreach (BoxCollider2D thing in Boxes)
-        {
-            Destroy(thing);
-        }
-        GetComponent<SpriteRenderer>().enabled = false;
-        StartCoroutine(DestroyEnemy());
+		Destroy(SelfTarget);
+
+//		  Destroy(GetComponent<Rigidbody2D>());
+//        //Destroy(GetComponent<BoxCollider2D>());
+//        BoxCollider2D[] Boxes = GetComponents<BoxCollider2D>();
+//        foreach (BoxCollider2D thing in Boxes)
+//        {
+//            Destroy(thing);
+//        }
+//        GetComponent<SpriteRenderer>().enabled = false;
+//        StartCoroutine(DestroyEnemy());
         
     }
 
-    private IEnumerator DestroyEnemy()
-    {
-        opposingHealth.HealthAmount -= damage;
-        yield return new WaitForSeconds(2);
-        Destroy(SelfTarget);
-    }
+   // private IEnumerator DestroyEnemy()
+  //  {
+       // opposingHealth.HealthAmount -= damage;
+       // yield return new WaitForSeconds(2);
+        
+  //  }
 }
