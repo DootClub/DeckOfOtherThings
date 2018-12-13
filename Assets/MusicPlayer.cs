@@ -8,7 +8,7 @@ public class MusicPlayer : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		DontDestroyOnLoad('t')
+		//DontDestroyOnLoad('t')
 	}
 	
 	// Update is called once per frame

@@ -27,6 +27,7 @@ public class VisionCircle : MonoBehaviour   // Venus
         {
             transform.right = collision.transform.position - transform.position;
             shooter.GetComponent<Shooter>().SwitchOn = true;
+            Debug.Log("True");
         }
 
         //shooter.GetComponent<Shooter>().enabled = true;
@@ -38,6 +39,11 @@ public class VisionCircle : MonoBehaviour   // Venus
         if (other.tag == "Enemy")
         {
             transform.right = other.transform.position - transform.position;
+            shooter.GetComponent<Shooter>().SwitchOn = true;
+        }
+        else
+        {
+            shooter.GetComponent<Shooter>().SwitchOn = false;
         }
         //shooter.GetComponent<Shooter>().enabled = true;
     }
