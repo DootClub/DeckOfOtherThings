@@ -1,19 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class VisionCircle : MonoBehaviour   // Venus
 {
-    //public float FireRate;
-    //public GameObject Shooter;
-
-    /*private float LastFired;
-    public Vector3 DisplaceVector;*/
+    public event Action<bool> SwitchEvent;
+    public GameObject shooter;
 
     // Use this for initialization
     void Start()
     {
-        
+        //shooter.GetComponent<Shooter>().enabled = false;
     }
 
     // Update is called once per frame
@@ -22,31 +20,34 @@ public class VisionCircle : MonoBehaviour   // Venus
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //if (SwitchEvent != null) SwitchEvent(true);
+        if (collision.tag == "Enemy")
+        {
+            transform.right = collision.transform.position - transform.position;
+            shooter.GetComponent<Shooter>().SwitchOn = true;
+        }
+
+        //shooter.GetComponent<Shooter>().enabled = true;
+        
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Enemy")
         {
             transform.right = other.transform.position - transform.position;
         }
+        //shooter.GetComponent<Shooter>().enabled = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        //Quaternion test = collision.GetComponent<Transform>().rotation;
-        //Debug.Log("Hit!");
-        /*if (Time.time - LastFired > 1 / (FireRate / 10))
+        if (other.tag == "Enemy")
         {
-            LastFired = Time.time;
-            //Shoot();
-            Instantiate(Projectile, GetComponent<Transform>());
-        }*/
-        //Instantiate(Shooter, collision.GetComponent<Transform>().position, );
-        //Vector3 OwnPos = GetComponent<Transform>();
-        /*Vector3.RotateTowards(transform.position, collision.transform.position, 0, Mathf.PI);
-        Vector2.*/
-        if (collision.tag == "Enemy")
-        {
-            transform.right = collision.transform.position - transform.position;
+            //transform.right = collision.transform.position - transform.position;
+            shooter.GetComponent<Shooter>().SwitchOn = false;
         }
     }
 }
