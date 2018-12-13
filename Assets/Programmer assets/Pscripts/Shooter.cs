@@ -26,14 +26,9 @@ public class Shooter : MonoBehaviour    // Venus
         {
             LastFired = Time.time;
             //Shoot();
-            Instantiate(ObjectToSpawn, GetComponent<Transform>());
+            Instantiate(ObjectToSpawn, GetComponent<Transform>().position, Quaternion.identity);
         }
         //Invoke("Shoot", ShootDelay);
-    }
-
-    void Shoot()
-    {
-        
     }
 
     void SetDPS(int fireRate)
